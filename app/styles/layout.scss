@@ -1,0 +1,31 @@
+body > div[class='ember-view'],
+body > div > section[class='ember-view'] {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  margin: auto;
+}
+
+md-toolbar {
+  height: 50px;
+  min-height: 50px;
+}
+
+.md-breadcrumb-page {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.main-content {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  padding-bottom: 100px;
+}

@@ -1,0 +1,43 @@
+{{#unless isAndroid}}
+  <div class='m-b-1'>
+    You cannot take picture with your computer. the button has been hidden with a condition
+  </div>
+{{else}}
+  {{upload-camera}}
+{{/unless}}
+{{#if pictures.length}}
+<!--
+{{#paper-content class="md-whiteframe-z1 list-demo"}}
+  {{#paper-list}}
+    {{#each pictures as |item|}}
+      {{#paper-item class="md-3-line"}}
+        <img src="data:image/png;base64,{{item.uri}}" alt={{item.name}} class="md-avatar">
+        <div class="md-list-item-text">
+          <h3></h3>
+          <p>
+            {{item.name}}
+          </p>
+        </div>
+      {{/paper-item}}
+    {{/each}}
+  {{/paper-list}}
+{{/paper-content}}
+{{else}}
+  <div class='rotate-3deg'>
+    What are you doing? Take a picture already!
+  </div>
+{{/if}}
+
+-->
+{{#each pictures as |item|}}
+  {{#paper-card}}
+    <img src="data:image/png;base64,{{item.uri}}" alt={{item.name}}>
+    {{#paper-card-content}}
+      <h2>{{item.name}}</h2>
+    {{/paper-card-content}}
+  {{/paper-card}}
+{{else}}
+  <div class='rotate-3deg'>
+    What are you doing? Take a picture already!
+  </div>
+{{/each}}

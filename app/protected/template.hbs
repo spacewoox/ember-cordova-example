@@ -1,0 +1,20 @@
+{{#paper-nav-container}}
+  <div layout="column" class='main-content' tabindex="-1" role="main" flex>
+    {{#paper-toolbar}}
+      <div class="md-toolbar-tools">
+        <span class="md-breadcrumb-page">Did you know ? : this tips is the only one.</span>
+      </div>
+    {{/paper-toolbar}}
+
+    {{#paper-content class="md-padding content"}}
+      {{outlet}}
+    {{/paper-content}}
+
+    {{#paper-toolbar class='ta-center'}}
+      <div class="md-toolbar-tools content-center">
+        {{#paper-button icon-button=true action=(transition-to 'protected.index')}}{{paper-icon "home"}}{{/paper-button}}
+        {{#paper-button icon-button=true action=(transition-to 'protected.file-upload')}}{{paper-icon "terrain"}}{{/paper-button}}
+      </div>
+    {{/paper-toolbar}}
+  </div>
+{{/paper-nav-container}}

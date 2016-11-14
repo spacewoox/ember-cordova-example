@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('protected', { path : '/' }, function() {
+    this.route('file-upload');
+  });
 });
 
 export default Router;
